@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="gSZ-iy-KkD">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="dF4-As-FiL" customClass="ProfileViewController" customModule="UIResponderSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3PV-Mt-xed">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="NHY-zr-j0A">
+                                <rect key="frame" x="67" y="52" width="240" height="364"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8qm-cZ-Cc7" customClass="UIImageViewX" customModule="UIResponderSample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="Eex-T2-r9h"/>
+                                            <constraint firstAttribute="height" constant="240" id="Jzk-pa-1mm"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="120"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hp8-05-vLs">
+                                        <rect key="frame" x="0.0" y="272" width="240" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="RDM-Bl-4Dp">
+                                        <rect key="frame" x="83" y="334" width="74" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05l-j5-vPm">
+                                                <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
+                                                <state key="normal" title="保存"/>
+                                                <connections>
+                                                    <action selector="saveButtonTapped:" destination="dF4-As-FiL" eventType="touchUpInside" id="LAS-c0-t4b"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljp-3Y-9oY">
+                                                <rect key="frame" x="43" y="0.0" width="31" height="30"/>
+                                                <state key="normal" title="削除"/>
+                                                <connections>
+                                                    <action selector="deleteButtonTapped:" destination="dF4-As-FiL" eventType="touchUpInside" id="4mH-gN-xmL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Hp8-05-vLs" secondAttribute="trailing" id="Fuo-v5-qkW"/>
+                                    <constraint firstItem="Hp8-05-vLs" firstAttribute="leading" secondItem="NHY-zr-j0A" secondAttribute="leading" id="ujj-ye-V4A"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NHY-zr-j0A" firstAttribute="centerX" secondItem="3PV-Mt-xed" secondAttribute="centerX" id="KjA-Sf-bQ5"/>
+                            <constraint firstItem="NHY-zr-j0A" firstAttribute="top" secondItem="K3O-3g-CFH" secondAttribute="top" constant="32" id="sPc-WS-ab3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="K3O-3g-CFH"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="8qm-cZ-Cc7" id="EcD-fA-b9E"/>
+                        <outlet property="nameTextField" destination="Hp8-05-vLs" id="Stx-qQ-nS2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JgG-JX-Kr5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="423" y="253"/>
+        </scene>
+    </scenes>
+</document>

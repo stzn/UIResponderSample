@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="h2D-aZ-rNU">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="h36-Eu-Wnw" customClass="DetailViewController" customModule="UIResponderSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dam-Hy-Dvg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="78J-oe-LUv">
+                                <rect key="frame" x="16" y="68" width="343" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxE-Se-Xyz">
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="タイトルを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b2p-YH-z89">
+                                        <rect key="frame" x="92" y="0.0" width="251" height="40"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="kXc-0q-UlZ"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SlK-vq-kPY">
+                                <rect key="frame" x="16" y="156" width="343" height="61.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="投稿内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5f6-wl-5Nn">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LzV-DC-uL8">
+                                        <rect key="frame" x="0.0" y="28.5" width="343" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="sbR-5V-nCZ">
+                                <rect key="frame" x="267" y="26" width="92" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJZ-Zg-cmz">
+                                        <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
+                                        <state key="normal" title="保存"/>
+                                        <connections>
+                                            <action selector="saveButtonTapped:" destination="h36-Eu-Wnw" eventType="touchUpInside" id="rx1-Py-swJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKd-CE-x7a">
+                                        <rect key="frame" x="61" y="0.0" width="31" height="30"/>
+                                        <state key="normal" title="削除"/>
+                                        <connections>
+                                            <action selector="deleteButtonTapped:" destination="h36-Eu-Wnw" eventType="touchUpInside" id="EGS-Gx-qhz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="caI-Rx-O7i" firstAttribute="trailing" secondItem="sbR-5V-nCZ" secondAttribute="trailing" constant="16" id="2sM-49-Otm"/>
+                            <constraint firstItem="SlK-vq-kPY" firstAttribute="leading" secondItem="caI-Rx-O7i" secondAttribute="leading" constant="16" id="Jha-oU-HEF"/>
+                            <constraint firstItem="78J-oe-LUv" firstAttribute="top" secondItem="sbR-5V-nCZ" secondAttribute="bottom" constant="12" id="Qrx-sI-Rqf"/>
+                            <constraint firstItem="78J-oe-LUv" firstAttribute="leading" secondItem="caI-Rx-O7i" secondAttribute="leading" constant="16" id="VmK-II-ij6"/>
+                            <constraint firstItem="caI-Rx-O7i" firstAttribute="trailing" secondItem="SlK-vq-kPY" secondAttribute="trailing" constant="16" id="bcl-UO-Ae5"/>
+                            <constraint firstItem="sbR-5V-nCZ" firstAttribute="top" secondItem="caI-Rx-O7i" secondAttribute="top" constant="6" id="fty-YM-QCc"/>
+                            <constraint firstItem="78J-oe-LUv" firstAttribute="top" secondItem="caI-Rx-O7i" secondAttribute="top" constant="48" id="hOA-CO-78Q"/>
+                            <constraint firstItem="SlK-vq-kPY" firstAttribute="top" secondItem="78J-oe-LUv" secondAttribute="bottom" constant="48" id="kdM-sK-Wln"/>
+                            <constraint firstItem="caI-Rx-O7i" firstAttribute="trailing" secondItem="78J-oe-LUv" secondAttribute="trailing" constant="16" id="lk3-dm-O71"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="caI-Rx-O7i"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentsTextView" destination="LzV-DC-uL8" id="rtd-uV-2Sy"/>
+                        <outlet property="titleTextField" destination="b2p-YH-z89" id="vTq-FH-Iw6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zLA-f3-gBa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-414" y="175"/>
+        </scene>
+    </scenes>
+</document>

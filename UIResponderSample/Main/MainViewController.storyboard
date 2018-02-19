@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iRc-z2-8a0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="qRD-CT-Jxy">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="iRc-z2-8a0" customClass="MainViewController" customModule="UIResponderSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nfN-8t-l3V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smg-jg-IQX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="600.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UfJ-Ph-L81">
+                                <rect key="frame" x="0.0" y="600.5" width="375" height="66.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vov-79-AHR">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="66.5"/>
+                                        <state key="normal" title="List"/>
+                                        <connections>
+                                            <action selector="listButtonTapped:" destination="iRc-z2-8a0" eventType="touchUpInside" id="26M-Gu-Cl4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TA3-5d-7WP">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="66.5"/>
+                                        <state key="normal" title="Profile"/>
+                                        <connections>
+                                            <action selector="profileButtonTapped:" destination="iRc-z2-8a0" eventType="touchUpInside" id="R7L-Yc-pLm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UfJ-Ph-L81" firstAttribute="bottom" secondItem="lvV-NS-BaJ" secondAttribute="bottom" id="4P5-Yg-Ofe"/>
+                            <constraint firstItem="lvV-NS-BaJ" firstAttribute="trailing" secondItem="smg-jg-IQX" secondAttribute="trailing" id="4xU-0h-75o"/>
+                            <constraint firstItem="smg-jg-IQX" firstAttribute="leading" secondItem="lvV-NS-BaJ" secondAttribute="leading" id="6P0-50-3jm"/>
+                            <constraint firstItem="UfJ-Ph-L81" firstAttribute="top" secondItem="smg-jg-IQX" secondAttribute="bottom" id="9SH-vJ-xtU"/>
+                            <constraint firstItem="lvV-NS-BaJ" firstAttribute="trailing" secondItem="UfJ-Ph-L81" secondAttribute="trailing" id="SXp-hx-41n"/>
+                            <constraint firstItem="UfJ-Ph-L81" firstAttribute="leading" secondItem="lvV-NS-BaJ" secondAttribute="leading" id="XWi-yN-cZB"/>
+                            <constraint firstItem="UfJ-Ph-L81" firstAttribute="height" secondItem="nfN-8t-l3V" secondAttribute="height" multiplier="0.1" id="YGi-h9-JFO"/>
+                            <constraint firstItem="smg-jg-IQX" firstAttribute="top" secondItem="nfN-8t-l3V" secondAttribute="top" id="p2k-2r-2qi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lvV-NS-BaJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="smg-jg-IQX" id="LUp-v1-e8J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HMK-ws-isb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1071" y="-100"/>
+        </scene>
+    </scenes>
+</document>
