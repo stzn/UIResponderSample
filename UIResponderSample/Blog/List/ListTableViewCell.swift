@@ -24,7 +24,7 @@ class ListTableViewCell: UITableViewCell {
         guard let blog = blog else {
             return
         }
-        // イベント発火
+        // アクション実行
         self.execute(action: ShowDetailAction(blog))
     }
     
@@ -32,7 +32,7 @@ class ListTableViewCell: UITableViewCell {
         guard let sender = sender as? UIView else {
             return
         }
-        // イベント発火
+        // アクション実行
         self.execute(action: DeleteBlogAction(sender.tag))
     }
 }
