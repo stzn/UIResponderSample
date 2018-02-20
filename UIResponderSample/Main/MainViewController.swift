@@ -23,6 +23,7 @@ final class MainViewController: UIViewController {
     
     private func showViewController() {
         if let vc = activeViewController {
+            vc.view.frame = contentView.frame
             add(childController: vc, targetView: contentView)
         }
     }
